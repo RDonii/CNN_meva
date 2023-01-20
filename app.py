@@ -17,7 +17,7 @@ with st.sidebar:
     st.title("Baholang")
     with st.form('score', clear_on_submit=True):
         stars = st.select_slider('Nechta ⭐️ bilan siylaysiz:', ['', '⭐️', '⭐️⭐️', '⭐️⭐️⭐️', '⭐️⭐️⭐️⭐️', '⭐️⭐️⭐️⭐️⭐️'], )
-        feedback = st.text_area('Fikir yoki taklifingiz:')
+        feedback = st.text_area('Fikr yoki taklifingiz:')
         submitted =  st.form_submit_button('Yuborish')
         if submitted:
             message = f'Stars: {stars}\n\nMessage: {feedback}'
