@@ -31,7 +31,7 @@ with st.sidebar:
     ''', unsafe_allow_html=True)
 
     st.header('Github:')
-    st.write('''   <a href="#" style="color:green;" target="_blank">CNN_Mevalar</a>''', unsafe_allow_html=True)
+    st.write('''   <a href="https://github.com/RDonii/CNN_meva" style="color:green;" target="_blank">CNN_Mevalar</a>''', unsafe_allow_html=True)
 
     st.write("""
     ---
