@@ -88,10 +88,8 @@ with st.expander("Qo'llanma"):
         - Limon
         - Pomidor
         - Uzum
-
-        *Resurslarni chap yuqoridagi tugmani bosish orqali saydbardan topishingiz mumkin*.
     ''')
-    
+    st.info('*Resurslarni chap yuqoridagi tugmani bosish orqali saydbardan topishingiz mumkin*.')
     st.warning("Filter modelni train qilishda manfiy klass uchun ishlatilingan dataset uy ichkarisida olingan rasimlar bolgani uchun **xozicha** ko'cha rasimlari bilan ishlashda xatoliklar kuzatilinishi mumkin.", icon='⚠️')
 
 st.write('---')
