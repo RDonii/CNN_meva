@@ -152,10 +152,3 @@ if uploaded:
                             }
                         )
                 st.plotly_chart(mfig)
-
-# my_slider_val = st.slider('Quinn Mallory', 1, 88)
-# st.write(my_slider_val)
-
-
-
-# filterni o'chirib yoqish uchun Checkbox 
