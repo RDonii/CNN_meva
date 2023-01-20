@@ -15,7 +15,7 @@ st.set_page_config(
 # Sidebar
 with st.sidebar:
     st.title("Baholang")
-    with st.form('score'):
+    with st.form('score', clear_on_submit=True):
         stars = st.select_slider('Nechta ⭐️ bilan siylaysiz:', ['', '⭐️', '⭐️⭐️', '⭐️⭐️⭐️', '⭐️⭐️⭐️⭐️', '⭐️⭐️⭐️⭐️⭐️'], )
         feedback = st.text_area('Fikir yoki taklifingiz:')
         submitted =  st.form_submit_button('Yuborish')
