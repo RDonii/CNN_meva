@@ -1,6 +1,8 @@
 import streamlit as st
 from fastai.vision.all import *
 from plotly import express as px
+import requests
+
 
 st.set_page_config(
     page_title="Mevalar",
@@ -12,6 +14,27 @@ st.set_page_config(
 
 # Sidebar
 with st.sidebar:
+    st.title("Baholang")
+    with st.form('score'):
+        stars = st.select_slider('Nechta ⭐️ bilan siylaysiz:', ['', '⭐️', '⭐️⭐️', '⭐️⭐️⭐️', '⭐️⭐️⭐️⭐️', '⭐️⭐️⭐️⭐️⭐️'], )
+        feedback = st.text_area('Fikir yoki taklifingiz:')
+        submitted =  st.form_submit_button('Yuborish')
+        if submitted:
+            message = f'Stars: {stars}\n\nMessage: {feedback}'
+            try:
+                res = requests.get(
+                    f"https://api.telegram.org/bot{st.secrets.get('BOT_TOKEN')}/sendMessage?chat_id={st.secrets.get('ADMIN_ID')}&text={message}"
+                )
+            except:
+                st.error("Yuborolmadim, nimadir xato ketdi😔")
+            finally:
+                if res.status_code == 200:
+                    st.success('Yuborildi, raxmat😎')
+                else:
+                    st.error("Yuborolmadim, nimadir xato bo'ldi shekili😔")
+    st.write('---')
+
+    st.title("Resurslar")
     st.header('Modellar')
     st.write('''
         - <a href="https://drive.google.com/file/d/1hMqUjQGT_aJan4XL1Ari9z-mvYOx3DlS/view?usp=share_link" style="color:green;" target="_blank">fruits_filter.pkl</a>
