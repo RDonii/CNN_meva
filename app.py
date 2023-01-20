@@ -35,7 +35,7 @@ with st.sidebar:
 
     st.write("""
     ---
-    *Streamlitni tanishtirganingiz uchun alohida raxmat aytmoqchiman.* 😊
+    *Streamlitni tanishtirganingiz uchun alohida raxmat aytmoqchiman. Yetarlicha imkoniyatli, juda qulay va sodda ekan.* 😊
     """)
 
 
